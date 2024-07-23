@@ -35,8 +35,8 @@ const [loading, setLoading] = useState(false);
 const [aiOutput, setAiOutput] = useState<string>();
 const {user}=useUser();
 const router=useRouter();
-const[totalUsage,setTotalUsage]=useContext(TotalUsageContext)
-const [updateCreditUsage,setUpdateCreditUsage]=useContext(UpdateCreditUsageContext)
+const{totalUsage,setTotalUsage}=useContext(TotalUsageContext)
+const {updateCreditUsage,setUpdateCreditUsage}=useContext(UpdateCreditUsageContext)
 const GenerateAIContent=async (formData:any)=>{
   if (totalUsage>=10000){
     console.log("PLease Upgrade your plan")
